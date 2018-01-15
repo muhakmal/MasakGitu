@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout_jumlah_bahan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/millenialPink"
+    tools:context="com.castoriqbal.masakgitu.JumlahBahanActivity"
+    >
+
+    <com.john.waveview.WaveView
+        android:id="@+id/wave_view_jumlah_bahan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/millenialPink"
+        app:above_wave_color="@android:color/white"
+        app:blow_wave_color="@android:color/white"
+        app:progress="10"
+        android:animateLayoutChanges="true"
+        app:wave_height="middle"
+        app:wave_hz="fast"
+        app:wave_length="middle" />
+
+    <com.hariofspades.incdeclibrary.IncDecCircular
+        android:id="@+id/increment_decrement_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:leftButtonColorTint="@color/white"
+        app:rightButtonColorTinit="@color/white"
+        app:leftDrawableTint="@color/millenialPink"
+        app:rightDrawableTint="@color/millenialPink"
+        app:leftDrawable="@drawable/minus"
+        app:rightDrawable="@drawable/plus"
+        app:textSizeB="120"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </com.hariofspades.incdeclibrary.IncDecCircular>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:text="Number of Ingredients"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_search_bahan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:radius="40dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/round_background"
+        android:text="next"
+        android:textColor="@color/millenialPink"
+        app:layout_constraintBottom_toBottomOf="@+id/wave_view_jumlah_bahan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

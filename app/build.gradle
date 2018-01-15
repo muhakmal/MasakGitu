@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.castoriqbal.masakgitu"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //Recolor
+    implementation 'com.simmorsal.recolor:recolor:1.1.0'
+    //WaveView
+    compile 'com.github.john990:WaveView:v0.9'
+    //Isometric
+    compile 'io.fabianterhorst:Isometric:0.0.6.5'
+    //IncDec
+    compile 'com.hariofspades.IncDec:incdeclibrary:0.0.5'
+    //Sequent
+    compile 'com.fujiyuu75:sequent:0.2.1'
+    //Volley
+    compile 'com.android.volley:volley:1.1.0'
+    //GSON
+    compile 'com.google.code.gson:gson:2.8.2'
+    //WaveLoadingView
+    compile 'me.itangqi.waveloadingview:library:0.3.5'
+    //EasyFlipView
+    compile 'com.wajahatkarim3.EasyFlipView:EasyFlipView:2.0.5'
+    //MaterialBadgeTextView
+    compile 'com.github.matrixxun:MaterialBadgeTextView:c5a27e8243'
+}

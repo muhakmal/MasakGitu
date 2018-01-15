@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.matrixxun.starry.badgetextview.MaterialBadgeTextView
+        android:id="@+id/drawable_count_step"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/millenialPink02"
+        android:text="9"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mbtv_border_width="0dp"
+        app:mbtv_type="shadow_alpha"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/text_judul_step"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/drawable_count_step"
+        android:text="Siapkan bahan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/drawable_count_step"
+        app:layout_constraintTop_toTopOf="@+id/drawable_count_step" />
+
+    <TextView
+        android:id="@+id/text_penjelasan_step"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/text_judul_step"
+        android:layout_below="@id/text_judul_step"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:paddingBottom="10dp"
+        android:text="Begini cara menyiapkan bahan"
+        app:layout_constraintStart_toEndOf="@+id/drawable_count_step"
+        app:layout_constraintTop_toBottomOf="@+id/text_judul_step" />
+</android.support.constraint.ConstraintLayout>

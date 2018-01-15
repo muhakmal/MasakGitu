@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatAutoCompleteTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_background"
+    android:hint="Ingredient Name"
+    android:textSize="18sp"
+    android:layout_marginBottom="10dp"
+    android:paddingBottom="11dp"
+    android:paddingTop="11dp"
+    android:paddingRight="11dp"
+    android:paddingLeft="20dp"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
