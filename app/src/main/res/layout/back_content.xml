@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How-to Make."
+        android:text="Bagaimana Membuat."
         android:textSize="24sp"
         android:textAlignment="center"/>
 </LinearLayout>

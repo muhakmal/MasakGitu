@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/millenialPink02"
+    tools:context="com.castoriqbal.masakgitu.MasukActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="4dp"
+            android:src="@drawable/ic_masakgitu_backwhite"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelogin"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/et_email_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_background"
+            android:drawableLeft="@drawable/ic_mail"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:elevation="4dp"
+            android:hint="pengguna@kotaksurat.com"
+            android:paddingLeft="20dp"
+            android:paddingVertical="11dp"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/et_password_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_email_masuk"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_background"
+            android:drawableLeft="@drawable/ic_key"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:elevation="4dp"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingVertical="11dp"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardviewmasuk"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_password_masuk"
+            android:background="@color/nliveo_white"
+            android:elevation="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <Button
+                android:id="@+id/btn_masuk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/nliveo_transparent"
+                android:hapticFeedbackEnabled="true"
+                android:text="MASUK"
+                android:textAllCaps="false"
+                android:textColor="@color/millenialPink02"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tidakpunyaakun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="Tidak punya akun?"
+        android:textColor="@color/nliveo_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativelogin" />
+
+    <TextView
+        android:id="@+id/tv_daftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Daftar"
+        android:textColor="@color/nliveo_white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tidakpunyaakun" />
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/progressCard"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:elevation="5dp" />
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

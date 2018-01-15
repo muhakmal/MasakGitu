@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fujiyuu75.sequent.Animation;
@@ -29,6 +30,7 @@ public class FormBahanActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     Button button;
     Intent intent;
+    TextView masukkannamabahanmasakan;
     ArrayList<String> listBahan = new ArrayList<>();
     private static final String[] COUNTRIES = new String[] {
             "Belgium", "France", "Italy", "Germany", "Spain", "Fradulesca", "Beliza"
@@ -42,7 +44,9 @@ public class FormBahanActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_form_bahan);
-
+        //untuk marquee text
+        masukkannamabahanmasakan = findViewById(R.id.masukkannamabahanmasakan);
+        masukkannamabahanmasakan.setSelected(true);
 
         jumlahBahan = Integer.parseInt(getIntent().getStringExtra("jumlahBahan"));
         linearLayout = findViewById(R.id.linear_layout_form_bahan);
