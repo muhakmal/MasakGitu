@@ -21,7 +21,7 @@
         android:freezesText="true"
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
-        android:text="Masukkan nama bahan masakan yang ingin dicari"
+        android:text="Masukkan Nama Bahan Masakan yang Ingin Dicari"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
         <activity
-            android:name=".MainActivity"
+            android:name=".MasukActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -30,7 +30,7 @@
             android:name=".ItemDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MasukActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BuatAkunActivity"

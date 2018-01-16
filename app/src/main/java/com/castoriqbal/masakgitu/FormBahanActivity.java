@@ -18,13 +18,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Response;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.fujiyuu75.sequent.Animation;
 import com.fujiyuu75.sequent.Sequent;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FormBahanActivity extends AppCompatActivity {
+    private static final String URL_SUGGESTION_NAMA_BAHAN = "http://masakini.xyz/masakgituapi/namaBahan.php";
     int jumlahBahan;
     LinearLayout linearLayout;
     ArrayAdapter<String> adapter;
@@ -32,9 +38,9 @@ public class FormBahanActivity extends AppCompatActivity {
     Intent intent;
     TextView masukkannamabahanmasakan;
     ArrayList<String> listBahan = new ArrayList<>();
-    private static final String[] COUNTRIES = new String[] {
-            "Belgium", "France", "Italy", "Germany", "Spain", "Fradulesca", "Beliza"
-    };
+    ArrayList<String> suggestionNamaBahan = new ArrayList<>();
+    Response.Listener<JSONArray> listener;
+    JsonArrayRequest request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +59,29 @@ public class FormBahanActivity extends AppCompatActivity {
         button = findViewById(R.id.button_search_bahan);
         button.setEnabled(false);
         intent = new Intent(this, SearchActivity.class);
+        adapter = new ArrayAdapter<String>(this, R.layout.simple_dropdown_item, suggestionNamaBahan);
+        listener = new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                suggestionNamaBahan.clear();
+                for(int i = 0; i < response.length(); i++){
+                    try {
+                        suggestionNamaBahan.add(i,response.getString(i));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
 
-        adapter = new ArrayAdapter<String>(this, R.layout.simple_dropdown_item, COUNTRIES);
+                adapter.clear();
+                adapter.addAll(suggestionNamaBahan);
+                adapter.notifyDataSetChanged();
+            }
+        };
+
+        request = new JsonArrayRequest(URL_SUGGESTION_NAMA_BAHAN,listener,null);
+
+        VolleySingleton.getInstance(this.getApplicationContext()).getRequestQueue().add(request);
+
         for(int i = 0; i < jumlahBahan; i++){
             final AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) getLayoutInflater().inflate(R.layout.auto_complete_text_view,
                     linearLayout, false);

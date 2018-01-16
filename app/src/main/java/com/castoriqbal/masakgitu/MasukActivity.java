@@ -48,6 +48,7 @@ public class MasukActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MasukActivity.this, BuatAkunActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -67,8 +68,6 @@ public class MasukActivity extends AppCompatActivity {
                                 Toast.makeText(MasukActivity.this, "Selamat, anda berhasil masuk", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MasukActivity.this, MainActivity.class);
                                 MasukActivity.this.startActivity(intent);
-                                MasukActivity.this.finish();
-
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(MasukActivity.this);
                                 builder.setMessage(response)
@@ -85,8 +84,7 @@ public class MasukActivity extends AppCompatActivity {
                     }
                 };
                 MasukRequest masukRequest = new MasukRequest(email, password, listener);
-                RequestQueue antrian = Volley.newRequestQueue(MasukActivity.this);
-                antrian.add(masukRequest);
+                VolleySingleton.getInstance(getApplicationContext()).getRequestQueue().add(masukRequest);
             }
         });
 

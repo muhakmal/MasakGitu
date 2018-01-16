@@ -83,8 +83,7 @@ public class BuatAkunActivity extends AppCompatActivity {
                     }
                 };
                 BuatAkunRequest buatAkunRequest = new BuatAkunRequest(nama, email, password, no_hp, alamat_lengkap, responseListener);
-                RequestQueue antrian = Volley.newRequestQueue(BuatAkunActivity.this);
-                antrian.add(buatAkunRequest);
+                VolleySingleton.getInstance(getApplicationContext()).getRequestQueue().add(buatAkunRequest);
             }
         });
 
