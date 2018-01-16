@@ -47,4 +47,6 @@ dependencies {
     compile 'com.wajahatkarim3.EasyFlipView:EasyFlipView:2.0.5'
     //MaterialBadgeTextView
     compile 'com.github.matrixxun:MaterialBadgeTextView:c5a27e8243'
+    //Nliveo
+    compile 'br.com.liveo:navigationdrawer-material:2.5.1'
 }

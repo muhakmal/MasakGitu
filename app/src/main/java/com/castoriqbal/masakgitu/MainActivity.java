@@ -18,7 +18,6 @@ import io.fabianterhorst.isometric.Color;
 import io.fabianterhorst.isometric.Isometric;
 import io.fabianterhorst.isometric.IsometricView;
 import io.fabianterhorst.isometric.Point;
-import io.fabianterhorst.isometric.shapes.Cylinder;
 import io.fabianterhorst.isometric.shapes.Prism;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -86,12 +85,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_profil) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_favorit) {
 
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.nav_masukdaftar) {
+            Intent intent = new Intent(this, MasukActivity.class);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

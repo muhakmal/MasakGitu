@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
-        android:text="Click the Cube to Find Recipes"
+        android:text="Pencet Kubus Untuk Memulai"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/isometric_view"
